@@ -1,0 +1,32 @@
+<p>listado works!</p>
+
+<div *ngIf="heroeBorrado != ''; else noBorrado" style="background-color: rgb(189, 255, 127);">
+    <h3>Heroe perdido: <small>{{heroeBorrado}}</small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No se borro nada</h3>
+</ng-template>
+
+<br>
+<div>
+    <button (click)="borrarHeroe()">
+        Borrar
+    </button>
+</div>
+
+<ul>
+    <li>{{heroes[0]}}</li>
+    <li>{{heroes[1]}}</li>
+    <li>{{heroes[2]}}</li>
+    <li>{{heroes[3]}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let variableHeroe of heroes; let i = index">
+        {{ i + 1 }} - {{ variableHeroe }}
+    </li>
+</ul>
+
+
+
