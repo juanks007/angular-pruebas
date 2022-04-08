@@ -1,0 +1,26 @@
+<h1>DC!!!</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let variablePersonaje of personajes ">
+                {{variablePersonaje.nombre}} - {{variablePersonaje.poder | number}}
+
+            </li>
+        </ul> -->
+        <app-personajes ></app-personajes>
+<!-- [dataPersonajes]="personajes" -->
+    </div>
+
+    <div class="col">
+        <app-agregar
+            [dataNuevo]="nuevo"
+           
+        ></app-agregar>
+        <!--  (dataReturn)="agregarNuevoPersionaje( $event )" -->
+        
+    </div>
+</div>
